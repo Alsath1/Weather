@@ -1,11 +1,40 @@
+:root {
+  --body-background-dark: #0d1117;
+  --body-background-light: #fff;
+  --body-background-default: var(--body-background-dark);
+}
+
+:root {
+  --components-background-dark: #4F4F4F;
+  --components-background-light: #fff;
+  --components-background-default: var(--components-background-dark);
+}
+
+:root {
+  --card-background-dark: #2e3035;
+  --card-background-light: rgba(71, 147, 255, 0.2);
+  --card-background-default: var(--card-background-dark);
+}
+
+:root {
+  --card-shadow-dark: 0px 3px 20px rgba(147, 144, 144, 0.28);
+  --card-shadow-light: 0px 3px 20px rgba(5, 5, 5, 0.28);
+  --card-shadow-default: var(--card-shadow-dark);
+}
+
+:root {
+  --text-color-dark: #fff;
+  --text-color-light: #000;
+  --text-color-default: var(--text-color-dark);
+}
+
 .this__day_info {
   position: relative;
   padding: 40px;
   max-width: 750px;
   width: 100%;
-  background: #fff;
-  background: #fff;
-  box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+  background: var(--components-background-default);
+  box-shadow: var(--card-shadow-default);
   border-radius: 20px;
 }
 
@@ -36,7 +65,7 @@
   color: #939cb0;
 }
 .item .indicator__value {
-  color: #000;
+  color: var(--text-color-default);
 }
 
 .cloud_img {

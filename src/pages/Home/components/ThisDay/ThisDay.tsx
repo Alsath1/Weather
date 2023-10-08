@@ -6,7 +6,7 @@ export const ThisDay = () => {
 		<div className={s.this__day}>
 			<div className={s.top__block}>
 				<div className={s.top__block_wrapper}>
-					<div className={s.this__temp}>20</div>
+					<div className={s.this__temp}>20°</div>
 					<div className={s.this__day_name}>Сегодня</div>
 				</div>
 				<GlobalSvgSelector id='sun' />
