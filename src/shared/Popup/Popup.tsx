@@ -1,5 +1,5 @@
 import { Item } from 'src/pages/Home/components/ThisDayInfo/ThisDayInfo';
-import s from '../../css/Popup.module.css';
+import s from './Popup.module.sass';
 import { ThisDayItem } from 'src/pages/Home/components/ThisDayInfo/ThisDayItem';
 import { GlobalSvgSelector } from 'src/assets/icons/global/globalSvgSelector';
 

@@ -1,5 +1,5 @@
 import { GlobalSvgSelector } from 'src/assets/icons/global/globalSvgSelector';
-import s from '../../../../css/ThisDay.module.css';
+import s from './ThisDay.module.sass';
 
 export const ThisDay = () => {
 	return (

@@ -1,8 +1,9 @@
-import s from '../../../../css/Days.module.css';
+import s from './Days.module.sass';
 import { Card } from './Card';
 import { Tabs } from './Tabs';
 
 export interface Day {
+	id: number;
 	day: string;
 	day_info: string;
 	icon_id: string;
@@ -14,6 +15,7 @@ export interface Day {
 export const Days = () => {
 	const days: Day[] = [
 		{
+			id: 1,
 			day: 'Сегодня',
 			day_info: '28 авг',
 			icon_id: 'sun',
@@ -22,6 +24,7 @@ export const Days = () => {
 			info: 'Облачно'
 		},
 		{
+			id: 2,
 			day: 'Завтра',
 			day_info: '29 авг',
 			icon_id: 'small_rain_sun',
@@ -30,6 +33,7 @@ export const Days = () => {
 			info: 'небольшой дождь и солнце'
 		},
 		{
+			id: 3,
 			day: 'Ср',
 			day_info: '30 авг',
 			icon_id: 'small_rain',
@@ -38,6 +42,7 @@ export const Days = () => {
 			info: 'небольшой дождь'
 		},
 		{
+			id: 4,
 			day: 'Чт',
 			day_info: '28 авг',
 			icon_id: 'mainly_cloudy',
@@ -46,6 +51,7 @@ export const Days = () => {
 			info: 'Облачно'
 		},
 		{
+			id: 5,
 			day: 'Пт',
 			day_info: '28 авг',
 			icon_id: 'rain',
@@ -54,6 +60,7 @@ export const Days = () => {
 			info: 'Облачно'
 		},
 		{
+			id: 6,
 			day: 'Сб',
 			day_info: '28 авг',
 			icon_id: 'sun',
@@ -62,6 +69,7 @@ export const Days = () => {
 			info: 'Облачно'
 		},
 		{
+			id: 7,
 			day: 'Вс',
 			day_info: '28 авг',
 			icon_id: 'sun',
@@ -76,7 +84,7 @@ export const Days = () => {
 			<Tabs />
 			<div className={s.days}>
 				{days.map((day: Day) => (
-					<Card day={day} />
+					<Card day={day} key={day.id} />
 				))}
 			</div>
 		</>

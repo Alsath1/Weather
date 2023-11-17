@@ -1,5 +1,5 @@
 import { GlobalSvgSelector } from 'src/assets/icons/global/globalSvgSelector';
-import s from '../../../../css/Days.module.css';
+import s from './Days.module.sass';
 import { Day } from './Days';
 
 interface Props {

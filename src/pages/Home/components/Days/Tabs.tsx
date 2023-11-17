@@ -1,4 +1,4 @@
-import s from '../../../../css/Days.module.css';
+import s from './Days.module.sass';
 
 export const Tabs = () => {
 	const tabs = [

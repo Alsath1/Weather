@@ -1,5 +1,5 @@
 import { Item } from './ThisDayInfo';
-import s from '../../../../css/ThisDayInfo.module.css';
+import s from './ThisDayInfo.module.sass';
 import { IndicatorSvgSelector } from 'src/assets/icons/indicators/IndicatorSvgSelector';
 interface Props {
 	item: Item;

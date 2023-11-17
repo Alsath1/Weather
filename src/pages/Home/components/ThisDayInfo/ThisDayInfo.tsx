@@ -1,4 +1,4 @@
-import s from '../../../../css/ThisDayInfo.module.css';
+import s from './ThisDayInfo.module.sass';
 import cloud from '../../../../assets/images/cloud.png';
 import { ThisDayItem } from './ThisDayItem';
 
