@@ -1,6 +1,7 @@
 import s from './ThisDayInfo.module.sass';
 import cloud from '../../../../assets/images/cloud.png';
 import { ThisDayItem } from './ThisDayItem';
+import { useCustomSelector } from 'src/hooks/store';
 
 export interface Item {
 	icon_id: string;
@@ -9,16 +10,21 @@ export interface Item {
 }
 
 export const ThisDayInfo = () => {
+	const { weather } = useCustomSelector(
+		state => state.currentWeatherSliceReducer
+	);
 	const items = [
 		{
 			icon_id: 'temp',
 			name: 'Температура',
-			value: '20° - ощущается как 17°'
+			value: `${Math.trunc(
+				weather.data.main.temp - 273
+			)} ° - ощущается как ${Math.trunc(weather.data.main.feels_like - 273)}`
 		},
 		{
 			icon_id: 'pressure',
 			name: 'Давление',
-			value: '765 мм ртутного столба - нормальное'
+			value: `${weather.data.main.pressure} мм ртутного столба`
 		},
 		{
 			icon_id: 'precipitation',
@@ -28,7 +34,7 @@ export const ThisDayInfo = () => {
 		{
 			icon_id: 'wind',
 			name: 'Ветер',
-			value: '3 м/с юго-запад - легкий ветер'
+			value: `${weather.data.wind.speed} м/с юго-запад`
 		}
 	];
 	return (

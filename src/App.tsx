@@ -1,5 +1,5 @@
 /** @format */
-import './css/index.css';
+import './styles/index.sass';
 import { Routes, Route } from 'react-router-dom';
 import { Home } from './pages/Home/components/Home';
 import { MonthStatistics } from './pages/MonthStatistics/MonthStatistics';

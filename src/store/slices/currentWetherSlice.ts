@@ -15,8 +15,9 @@ type Response = {
 
 const initialState: CurrentWeather = {
 	weather: {
-		main: {
-			temp: 0
+		data: {
+			main: { temp: 1 },
+			wind: { speed: 1 }
 		}
 	},
 	isLoading: false,
@@ -38,7 +39,7 @@ export const currentWeatherSlice = createSlice({
 			action: PayloadAction<AxiosResponse<Weather>>
 		) {
 			state.isLoading = false;
-			state.weather = action.payload.data;
+			state.weather = action.payload;
 			state.response = {
 				status: action.payload.status,
 				message: action.payload.statusText
@@ -58,60 +59,3 @@ export const currentWeatherSlice = createSlice({
 });
 
 export default currentWeatherSlice.reducer;
-
-// import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-// import { Weather } from '../types/type';
-// import { AxiosResponse } from 'axios';
-
-// type CurrentWeather = {
-// 	wether: Weather;
-// 	isLoading: boolean;
-// 	response: Response1;
-// };
-
-// type Response1 = {
-// 	status: number;
-// 	message: string;
-// };
-
-// const initalState = {
-// 	wether: {},
-// 	isLoading: false,
-// 	response: {
-// 		status: 0,
-// 		message: ' '
-// 	}
-// };
-
-// export const currentWeatherSlice = createSlice({
-// 	name: 'current_weather',
-// 	initalState,
-// 	reducers: {
-// 		fetchCurrentWeather(state) {
-// 			state.isLoading = true;
-// 		},
-// 		fetchCurrentWeatherSuccess(
-// 			state,
-// 			action: PayloadAction<AxiosResponse<Weather>>
-// 		) {
-// 			state.wether = action.payload.data;
-// 			state.isLoading = false;
-// 			state.response = {
-// 				status: action.payload.status,
-// 				message: action.payload.statusText
-// 			};
-// 		},
-// 		fetchCurrentWeatherError(
-// 			state,
-// 			action: PayloadAction<AxiosResponse<Weather>>
-// 		) {
-// 			state.isLoading = false;
-// 			state.response = {
-// 				status: action.payload.status,
-// 				message: action.payload.statusText
-// 			};
-// 		}
-// 	}
-// });
-
-// export default currentWeatherSlice.reducers;
